@@ -1,0 +1,10 @@
+{
+    "Install_state" : false,
+    "Install_path": {
+        "StartSH_file": "backend/start.sh",
+        "Patch_files" : {
+            "Openwebui_main" : "backend/open_webui/main.py",
+            "OpenAI_API_file": "backend/open_webui/apps/openai/main.py"
+        }
+    }
+}
