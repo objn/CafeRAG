@@ -1,0 +1,2 @@
+
+    payload = FusionCore.fusion(payload)

@@ -1,3 +1,4 @@
 FROM ghcr.io/open-webui/open-webui:main
 COPY ./CafeRAG/ /app/backend/CafeRAG/
-CMD ["python", "/app/backend/CafeRAG/Install.py"]
+COPY ./start.sh /app/backend/start.sh
+CMD ["bash", "start.sh"]
