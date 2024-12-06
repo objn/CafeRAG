@@ -2,32 +2,11 @@ from Installlib import logo
 import os
 import config
 
-# SOURCE CODE
-
-def setup_env():
-    path = '/app/backend/data/CafeRAG/'
-    sub_folder = ['knowledge_files','cache']
-    # Ensure the main directory exists
-    if not os.path.exists(path):
-        os.makedirs(path)
-        # Create each subfolder under the main directory
-        for folder in sub_folder:
-            folder_path = os.path.join(path, folder)
-            if not os.path.exists(folder_path):
-                os.makedirs(folder_path)
-                print(f"Created folder: {folder_path}")
-            else:
-                print(f"Folder already exists: {folder_path}")
-
-        
-# SOURCE CODE END
-
 config_data = config.read_file_config()
 
 if config.read_config('Install_state', config_data) == False:
 
     print(logo.installer())
-    setup_env()
     # เรียกใช้เมธอดโดยระบุเส้นทางของไฟล์ที่เกี่ยวข้อง
     main_file = ['open-webui','fusion-data-import','fusion-data']
     src_file = ['']  # ไฟล์ที่มีโค้ดใหม่
